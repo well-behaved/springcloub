@@ -10,10 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>serviceconsumer-fegin</artifactId>
+    <description>fegin</description>
     <dependencies>
         <!--
                 一定要写称spring-cloud-starter-netflix-eureka-client
                 如果写错成spring-cloud-netflix-eureka-client,将无法注册
+                Feign是自带断路器的
         -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

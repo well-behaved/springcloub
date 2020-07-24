@@ -1,5 +1,6 @@
 package com.xue.demo.service.consumer.fegin.service;
 
+import com.xue.demo.service.consumer.fegin.service.impl.HelloServiceHystric;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * 通过@ FeignClient（“服务名”），来指定调用哪个服务
  * Created by hsh on 2017/12/25.
  */
-@FeignClient(value = "serviceprovider")
+@FeignClient(value = "serviceprovider",fallback = HelloServiceHystric.class)
 public interface HelloService {
 
     /**
