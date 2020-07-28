@@ -7,3 +7,10 @@ server:
 spring:
   application:
     name: serviceprovider
+  #zipkin server的地址
+  zipkin:
+    base-url: http://localhost:8770
+  sleuth:
+    sampler:
+      #监测比例，默认为0:1，设置为1则为每次http动作都监控，但是对性能会有影响:
+      probability: 1

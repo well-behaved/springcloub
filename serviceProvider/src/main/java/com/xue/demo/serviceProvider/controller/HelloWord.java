@@ -19,7 +19,7 @@ public class HelloWord {
     @RequestMapping("/hi")
     public String home(@RequestParam String name) throws InterruptedException {
         //测试短路期超时
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         return "hi "+name+",i am from port:" +port;
     }
 
