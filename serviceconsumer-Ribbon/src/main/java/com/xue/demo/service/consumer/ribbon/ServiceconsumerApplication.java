@@ -17,11 +17,4 @@ public class ServiceconsumerApplication {
         SpringApplication.run(ServiceconsumerApplication.class, args);
     }
 
-    //注入restTemplate
-    @Bean
-    //开启负载均衡
-    @LoadBalanced
-    RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 }

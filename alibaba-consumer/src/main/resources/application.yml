@@ -1,0 +1,33 @@
+server:
+  port: 9002
+
+spring:
+  cloud:
+    nacos:
+#      分布式配置
+      config:
+        server-addr: 127.0.0.1:8848
+#      服务注册与发现
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: alibaba-consumer
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test2?characterEncoding=utf8&serverTimezone=UTC
+
+
+logging:
+  level:
+#    处理日志频繁打印c.a.n.client.config.impl.ClientWorker    : get changedGroupKeys:[]
+    com.alibaba.nacos.client.config.impl: WARN
+
+dubbo:
+  protocol:
+    name: dubbo
+    #    -1 表示自增端口，从 20880 开始
+    port: -1
+  registry:
+    address: spring-cloud://127.0.0.1
