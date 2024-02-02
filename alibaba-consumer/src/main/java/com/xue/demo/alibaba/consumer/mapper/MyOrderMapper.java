@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface MyOrderMapper {
     @Insert(
-            "INSERT INTO `t_product` (`address_id`, `customer_id`, `create_time`) VALUES (#{address_id}, #{customer_id}, #{create_time})"
+            "INSERT INTO `t_order` (`address_id`, `customer_id`, `create_time`) VALUES (#{addressId}, #{customerId}, #{createTime})"
     )
     Long insertOne(MyOrderModel myOrderModel);
 

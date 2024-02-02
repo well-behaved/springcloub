@@ -31,3 +31,7 @@ dubbo:
     port: -1
   registry:
     address: spring-cloud://127.0.0.1
+    check: false
+  consumer:
+    # 不校验消费者是否存在
+    check: false
